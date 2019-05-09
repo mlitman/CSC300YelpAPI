@@ -32,7 +32,8 @@ public class YelpAPI extends Thread
             for(int i = 0; i < businesses.length(); i++)
             {
                 String name = businesses.getJSONObject(i).getString("name");
-                System.out.println("*** " + name);
+                String phone = businesses.getJSONObject(i).getString("display_phone");
+                Core.theRestaurantStrings.add(name + "\n" + phone);
             }
 
 
